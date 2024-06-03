@@ -13,7 +13,7 @@
     --cl-b: #100f11;
     --cl-pink: #ef476f;
     --cl-yellow: #fbaf00;
-    --cl-green: #00af54;
+    --cl-green: #22a34e;
     --cl-violet: #731dd8;
 
     --ff-h1: "Super Festival", "Segoe Print", "Bradley Hand", Chilanka,
@@ -94,7 +94,8 @@ a {
     color: inherit;
 }
 
-nav a {
+header a,
+footer a {
     text-decoration: inherit;
 }
 
@@ -112,6 +113,11 @@ header {
 }
 
 nav {
+    .icon {
+        scale: 2;
+        shape-rendering: geometricPrecision;
+    }
+
     &.mobile {
         display: flex;
         align-items: center;
@@ -143,6 +149,7 @@ nav {
             flex-grow: 1;
             width: 100%;
             text-align: center;
+            margin-bottom: 0.33em;
         }
     }
 
@@ -337,7 +344,7 @@ section {
         width: 100%;
         max-width: 40ch;
     }
-    
+
     p {
         width: 90%;
         max-width: 60ch;
@@ -411,7 +418,7 @@ section {
     }
 
     @media screen and (width >= 800px) {
-        padding-top: 12em;
+        padding-top: 14em;
     }
 }
 
@@ -421,12 +428,18 @@ main {
     }
 }
 
+.points,
+.why,
 .distribution {
     background-color: var(--cl-violet);
     color: var(--cl-w);
 }
 
-.jobs {
+.join {
+    .h1-like {
+        text-align: center;
+        font-size: 4em;
+    }
     background-color: var(--cl-yellow);
     color: var(--cl-b);
 
@@ -435,3 +448,51 @@ main {
     }
 }
 
+footer {
+    padding: 2em;
+
+    background-color: var(--cl-green);
+    color: var(--cl-w);
+
+    & svg {
+        display: block;
+        width: 112px;
+        background-color: var(--cl-pink);
+        border-radius: 1em;
+        margin: auto;
+    }
+
+    & .media-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 25%;
+
+        & svg {
+            fill: currentColor;
+            height: 32px;
+            width: 32px;
+        background-color: transparent;
+        border-radius: 0;
+    }
+
+        & h3 {
+            margin-bottom: 1em;
+            width: 100%;
+            font-size: 1.8em;
+        }
+    }
+
+    p {
+        text-align: center;
+        margin-top: 1em;
+    }
+}
+
+hr {
+    border: 2px var(--cl-w) solid;
+    border-radius: 1000vw;
+    margin: auto;
+    margin-block: 2em;
+    width: 80%;
+}
